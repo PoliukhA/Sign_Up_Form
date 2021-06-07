@@ -1,18 +1,105 @@
 .login {
-    &__wrapper {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 70px;
-        padding-top: 40px;
-        max-width: 100%;
-        min-height: 480px;
-        background-color: #fff;
-        border: 1px solid #e8e8e8;
-        border-radius: 10px;
-        box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+  background: $milk;
+  width: 650px;
+  height: 415px;
+  position: absolute;
+  top: 20%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+  &__wrapper {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    background: $lavender;
+    width: 320px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 2px 0 10px rgba(0,0,0,.1);
+    transition: all .5s ease-in-out;
+    z-index: 2;
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #4e464d;
+      border-radius: 50%;
+      text-align: center;
+      margin: 5px 10px;
+      background-color: $milk;
+      &:hover {
+          background-color: #766a75;
+          transition: background-color 1s ease-out;
+      }
+      img {
+        width: 25px;
+        height: 100%;
+        svg:hover {
+            fill: $milk;
+        }
+      }
     }
-    &__registration {
+  }
+  &__registration {
+    p {
+        font-family: $sans-serif;
+        font-size: .7em;
+        letter-spacing: 1.3px;
         text-align: center;
-        width: 50%;
+        color: $milk;
+        margin-top: 20px;
     }
+  }
+  &__rightbox {
+    position: absolute;
+    width: 50%;
+    transition: 1s all ease;
+    right: -2%;
+    p {
+        font-family: $sans-serif;
+        font-size: .7em;
+        letter-spacing: 1.3px;
+        text-align: center;
+        color: $gray;
+    }
+  }
+  &__title {
+    font-family: $serif;
+    color: $gray;
+    font-size: 1.8em;
+    line-height: 1.1em;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 18%;
+    text-transform: uppercase;
+  }
+  &__logo {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 43%;
+    left: 33%;
+  }
+  &__signin {
+    margin-top: 45%;
+  }
+}
+
+h1 {
+    font-family: $sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+    color: $milk;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+}
+
+
+span {
+  color: $green;
 }
