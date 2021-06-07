@@ -16,15 +16,6 @@
             font-size: 0.8em;
             font-weight: 100;
         }
-/*         &:focus {
-            color: $pink;
-            outline: none;
-            border-bottom: 1.2px solid rgba($pink, 0.7);
-            font-size: 1em;
-            transition: .8s all ease;
-            &::placeholder {
-            opacity: 0;
-            } */
     }
     &__checkbox {
         display: inline;
@@ -33,9 +24,14 @@
         top: 5px;
         input {
             width: 25px;
-            background: $pink;
+            margin-top: 15px;
+            position: absolute;
+            left: -115px;
         }
         label {
+            position: absolute;
+            left: -82px;
+            top: 14px;
             font-family: $sans-serif;
             color: $milk;
             font-size: 0.7em;

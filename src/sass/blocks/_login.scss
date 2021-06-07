@@ -30,10 +30,6 @@
       text-align: center;
       margin: 5px 10px;
       background-color: $milk;
-      &:hover {
-          background-color: #766a75;
-          transition: background-color 1s ease-out;
-      }
       img {
         width: 25px;
         height: 100%;
@@ -57,7 +53,7 @@
     position: absolute;
     width: 50%;
     transition: 1s all ease;
-    right: -2%;
+    right: -3%;
     p {
         font-family: $sans-serif;
         font-size: .7em;
@@ -90,15 +86,14 @@
 }
 
 h1 {
-    font-family: $sans-serif;
-    text-align: center;
-    margin-top: 50px;
-    text-transform: uppercase;
-    color: $milk;
-    font-size: 1.5em;
-    letter-spacing: 3px;
+  font-family: $sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  text-transform: uppercase;
+  color: $milk;
+  font-size: 1.5em;
+  letter-spacing: 3px;
 }
-
 
 span {
   color: $green;
