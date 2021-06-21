@@ -14,8 +14,7 @@ body {
     width: 650px;
     height: 550px;
     margin: 0 auto;
-    height: 100vh;
-    position: relative;
+    // you may try to position element by flex also (display, justify-content ang align-items)
 }
 
 @import 'blocks/buttons';

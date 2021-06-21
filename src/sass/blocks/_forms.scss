@@ -10,18 +10,33 @@
         border-bottom: 1px solid rgba($milk, 0.5);
         padding: 4px;
         margin: 7px;
+
         &::placeholder {
             color: rgba($milk, 1);
             letter-spacing: 2px;
             font-size: 0.8em;
+            // using ems/rems is important in bigger project, good that you see it right now
             font-weight: 100;
         }
+
+        &:focus {
+            outline: 0;
+            // add to get rid off the outlines on focus but be aware of accessibility issues if needed
+        }
+
+        &:-internal-autofill-selected {
+            -webkit-text-fill-color: #fff;
+            -webkit-box-shadow: 0 0 0px 1000px $lavender inset;
+            // solution for the lack of the support of autofill off in html
+        }
+
     }
     &__checkbox {
         display: inline;
         white-space: nowrap;
         position: relative;
         top: 5px;
+        
         input {
             width: 25px;
             margin-top: 15px;
@@ -40,5 +55,7 @@
                 color: #4e464d;
             }
         }
+
+        // did you try to simplify it just to practise? there is a lot of code to position the checkbox
     }
 }

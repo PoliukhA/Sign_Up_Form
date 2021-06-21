@@ -20,6 +20,8 @@
                     </div>
                     <p>or use your e-mail for registration</p>
                     <form class="login-form" autocomplete="off">
+                        <!-- autocomplete off is not supported by modern browsers, the soultion in the forms stylesheet -->
+                        <!-- here you can continue to use BEM - login__form -->
                         <input type="e-mail" placeholder="e-mail">
                         <input type="text" placeholder="number">
                         <input type="password" placeholder="password">
@@ -32,6 +34,7 @@
                 </div>
             </div>
            <div class="login__rightbox">
+               <!-- remember to pick a name of the class not specific by its visual or position characteristic because it may change during the project. in this case you may choose login__greeting for example -->
                 <h2 class="login__title"><span>bloom </span>&<br> petal</h2>
                 <p>pick your perfect<span> bouquet</span></p>
                 <img class="login__logo" src="icons/flowers_watercolor.svg"/>

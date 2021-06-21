@@ -83,6 +83,7 @@
   &__signin {
     margin-top: 45%;
   }
+  // we've got a lot of absolute positiong and perecntages here, it works really well right now on desktop but it will complicate a lot when we are goint to introduce some media queries
 }
 
 h1 {

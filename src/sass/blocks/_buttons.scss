@@ -7,15 +7,21 @@
   font-size: 11px;
   border-radius: 10px;
   margin: 0 auto;
-  outline: none;
   background: $milk;
   border: solid 1px $lavender;
+
+  &:focus {
+    outline: 0;
+    // add to get rid off the outlines on focus but be aware of accessibility issues if needed
+  }
+
   &:hover {
     background: #A1BF9B;
     color: $milk;
     transition: background-color 1s ease-out;
     border-color: darken($lavender, 5%);
   }
+
   &__submit {
     margin-top: 75px;
     width: 100px;
