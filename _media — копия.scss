@@ -1,0 +1,50 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .promo {
+        background-position: 180% 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .promo {
+        &__text {
+            padding-top: 0;
+            padding-bottom: 95%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .promo {
+        background-position: 180% 100%;
+    }
+    .offer {
+        &__text {
+            padding: 88px 0 440px 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    .subtitle {
+        font-size: 11px;
+    }
+    .btns {
+        width: 300px;
+    }
+}

@@ -1,3 +1,4 @@
+/* Ta część oznacza, że będziemy korzystać z tych pakietów. */
 const gulp        = require('gulp');
 const browserSync = require('browser-sync');
 const sass        = require('gulp-sass');
@@ -7,20 +8,21 @@ const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 
+/* skonfigurowanie serwera*/
 gulp.task('server', function() {
 
     browserSync({
         server: {
-            baseDir: "dist"
+            baseDir: "dist" /* proszę uważać, żeby w index.html była ta scieżka, która prowadzi juz do skomresowanego CSS <link rel="stylesheet" href="css/style.min.css"> */
         }
     });
 
-    gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("src/*.html").on('change', browserSync.reload); /* oznacza, że po każdej zmianię strona będzie przeładowywać się*/
 });
 
 gulp.task('styles', function() {
-    return gulp.src("src/sass/**/*.+(scss|sass)")
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    return gulp.src("src/sass/**/*.+(scss|sass)") /* śledzi za każdym plikiem scss w folderze src*/
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)) /* tranpilacja w CSS */
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -37,6 +39,7 @@ gulp.task('watch', function() {
     gulp.watch("src/img/**/*").on('all', gulp.parallel('images'));
 });
 
+/* minimalizacja HTML i zachowanie w folderze dist*/
 gulp.task('html', function () {
     return gulp.src("src/*.html")
         .pipe(htmlmin({ collapseWhitespace: true }))
@@ -68,4 +71,5 @@ gulp.task('images', function () {
         .pipe(browserSync.stream());
 });
 
+/* wywolywanie wszystkich napisanych funkcji */ 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));

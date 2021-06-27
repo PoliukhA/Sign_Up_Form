@@ -5,9 +5,11 @@
 
 body {
     background: #EECEBF;
+    background: linear-gradient(to bottom right, #EECEBF, #FFFFFF);
     background: -webkit-linear-gradient(top left, #EECEBF, #FFFFFF);
     background: -moz-linear-gradient(top left, #EECEBF, #FFFFFF);
-    background: linear-gradient(to bottom right, #EECEBF, #FFFFFF);
+    background-size: 100% 100%;
+    background-attachment: fixed; /* The background image will not scroll with the page */
 }
 
 .container {
@@ -21,3 +23,4 @@ body {
 @import 'blocks/buttons';
 @import 'blocks/forms';
 @import 'blocks/login';
+@import 'blocks/media';

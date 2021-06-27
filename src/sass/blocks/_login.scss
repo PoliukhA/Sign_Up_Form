@@ -1,8 +1,8 @@
 .login {
+  position: absolute;
   background: $milk;
   width: 650px;
   height: 415px;
-  position: absolute;
   top: 20%;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0,0,0,.1);
@@ -49,7 +49,7 @@
         margin-top: 20px;
     }
   }
-  &__rightbox {
+  &__greeting {
     position: absolute;
     width: 50%;
     transition: 1s all ease;
@@ -81,7 +81,7 @@
     left: 33%;
   }
   &__signin {
-    margin-top: 45%;
+    margin-top: 10rem;
   }
 }
 
