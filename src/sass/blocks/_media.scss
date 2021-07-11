@@ -22,19 +22,29 @@
         padding: 0 10px;
     }
     .login {
+        position: relative;
         top: auto;
         width: 100%;
         background: none;
         box-shadow: none;
         &__wrapper {
-            position: unset;
-            margin: 0 auto;
+            position: initial;
+            margin: 30px auto;
         }
         &__greeting {
             position: unset;
             width: auto;
+            background-size: 22%;
             p, button, br {
                 display: none;
+            }
+        }
+        &__registration {
+            display: inline-block;
+            margin: 30px;
+            h1 {
+                margin-top: 33px;
+                font-size: 1.3em;
             }
         }
         &__logo {
@@ -43,9 +53,25 @@
         }
         &__title {
             word-spacing: 3rem;
+            padding: 42px;
+        }
+        &__word {
+            display: none;
         }
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 444px) {
+    .login {
+        &__greeting {
+            background: none;
+        }
+        &__title {
+            word-spacing: unset;
+            padding: unset;
+        }
+        &__word {
+            display: inherit;
+        }
+    }
 }
